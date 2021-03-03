@@ -1,0 +1,177 @@
+@import 'utils/functions';
+@import 'utils/mixins';
+
+.Recipe {
+  &-goback-btn {
+    height: rem(25);
+    left: rem(36);
+    position: fixed;
+    top: rem(36);
+    width: rem(15);
+    z-index: 3;
+
+    svg {
+      fill: var(--color-light);
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-container {
+    margin: 0 auto;
+    padding-top: 64vh;
+  }
+
+  &-preview {
+    height: 64vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-wrapper {
+    background-color: var(--color-light);
+    padding: rem(4) 0 rem(48);
+    position: relative;
+    z-index: 4;
+
+    &::before {
+      background-color: var(--color-light);
+      border-radius: rem(20) rem(20) 0 0;
+      bottom: calc(100% - #{rem(1)});
+      height: rem(21);
+      left: 0;
+      width: 100%;
+      @include pseudo
+    }
+  }
+
+  &-head {
+    margin-bottom: rem(65);
+    padding: 0 rem(24);
+    position: relative;
+
+    &::before {
+      background-color: var(--color-tetriary-alt);
+      bottom: rem(-32);
+      height: rem(1);
+      left: 0;
+      width: 100vw;
+      @include pseudo;
+    }
+
+    &__title {
+      color: var(--color-primary);
+      margin-bottom: rem(16);
+      font: {
+        size: rem(24);
+        weight: 700;
+      }
+    }
+  }
+
+  &-benefits {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+
+    &__item {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+
+      &:not(:last-of-type) {
+        margin-right: rem(26);
+      }
+
+      svg {
+        fill: var(--color-secondary);
+        height: rem(25);
+        margin-right: rem(8);
+        width: rem(25);
+      }
+
+      p {
+        color: var(--color-secondary-alt);
+        letter-spacing: 0.03em;
+        font: {
+          size: rem(16);
+          weight: 700;
+        }
+      }
+    }
+  }
+
+  &-steps {
+    padding: 0 rem(16);
+  }
+
+  &-step {
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: rem(32);
+    position: relative;
+
+    &:not(:last-child)::before {
+      background: repeating-linear-gradient(
+        180deg,
+        var(--color-secondary-alt) 0,
+        var(--color-secondary-alt) #{rem(10)},
+        transparent #{rem(10)},
+        transparent #{rem(15)});
+      height: calc(100% + #{rem(32)}
+      );
+      left: rem(20);
+      top: 0;
+      width: rem(1);
+      @include pseudo;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__label {
+      align-items: center;
+      display: flex;
+      margin-right: rem(16);
+      z-index: 2;
+
+      p {
+        color: var(--color-primary-alt);
+        line-height: 0.5;
+        margin-right: rem(8);
+        width: rem(11);
+        font: {
+          family: 'Merriweather', serif;
+          size: rem(26);
+          weight: 400;
+        }
+      }
+
+      &-divider {
+        background-color: var(--color-tetriary);
+        border-radius: rem(1);
+        height: rem(32);
+        width: rem(3);
+      }
+    }
+
+    &__text {
+      color: var(--color-primary-alt);
+      line-height: 1.4;
+      font: {
+        size: rem(18);
+        weight: 400;
+      }
+    }
+  }
+}
