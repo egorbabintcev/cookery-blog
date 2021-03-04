@@ -1,4 +1,4 @@
-@mixin defineColorRGB($color, $hex) {
+@mixin define-color-rgb($color, $hex) {
   $red: red($hex);
   $green: green($hex);
   $blue: blue($hex);

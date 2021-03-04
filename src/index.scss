@@ -5,8 +5,8 @@
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 
   &::after,
   &::before {
@@ -34,11 +34,12 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
   line-height: 1;
+  margin: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -46,7 +47,7 @@ ul, ol {
 
 button {
   background-color: transparent;
-  border: none;
+  border: 0;
   cursor: pointer;
   margin: 0;
   outline: none;
