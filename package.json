@@ -1,5 +1,5 @@
 {
-  "name": "recipe-blog",
+  "name": "cookery-blog",
   "version": "0.1.0",
   "dependencies": {
     "@babel/core": "7.12.3",
